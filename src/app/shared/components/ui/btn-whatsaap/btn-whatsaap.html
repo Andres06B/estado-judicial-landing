@@ -1,0 +1,30 @@
+<a [href]="whatsappLink" target="_blank" rel="noopener noreferrer"
+    class="group fixed bottom-8 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-full backdrop-blur-xl border border-white/10 shadow-2xl transition-all duration-300 hover:scale-105 animate-soft-pulse"
+    style="
+    background: linear-gradient(135deg, rgba(37,211,102,0.15), rgba(18,140,126,0.25));
+  ">
+    <!-- Glow dinámico -->
+    <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"
+        style="box-shadow: 0 0 30px rgba(37, 211, 102, 0.45);">
+    </span>
+
+    <!-- Badge notificación -->
+    <span class="absolute -top-1 -right-1 flex h-4 w-4">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500"></span>
+    </span>
+
+    <!-- Icono WhatsApp REAL -->
+    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#25D366] shadow-inner">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 32 32" fill="currentColor">
+            <path
+                d="M16.001 3.2c-7.065 0-12.8 5.735-12.8 12.8 0 2.257.593 4.458 1.718 6.393L3.2 28.8l6.588-1.698A12.747 12.747 0 0 0 16 28.8c7.065 0 12.8-5.735 12.8-12.8S23.066 3.2 16.001 3.2zm0 23.2c-2.02 0-3.99-.527-5.724-1.525l-.41-.237-3.91 1.008 1.043-3.8-.267-.39a10.343 10.343 0 0 1-1.6-5.456c0-5.707 4.64-10.347 10.347-10.347S26.347 10.293 26.347 16 21.707 26.4 16 26.4zm5.713-7.613c-.312-.156-1.844-.91-2.129-1.013-.285-.104-.492-.156-.7.156-.207.312-.804 1.013-.986 1.222-.181.208-.363.234-.675.078-.312-.156-1.317-.485-2.51-1.548-.928-.828-1.554-1.85-1.735-2.162-.182-.312-.02-.48.136-.636.14-.139.312-.364.467-.545.156-.182.208-.312.312-.52.104-.208.052-.39-.026-.546-.078-.156-.7-1.688-.96-2.312-.254-.61-.512-.527-.7-.537-.182-.008-.39-.01-.598-.01-.208 0-.546.078-.832.39-.285.312-1.09 1.064-1.09 2.593 0 1.53 1.116 3.007 1.272 3.215.156.208 2.2 3.36 5.332 4.71.745.322 1.326.514 1.78.657.748.238 1.43.204 1.97.124.601-.09 1.844-.753 2.104-1.48.26-.727.26-1.35.182-1.48-.078-.13-.285-.208-.597-.364z" />
+        </svg>
+    </div>
+
+    <!-- Texto -->
+    <div class="hidden md:flex flex-col leading-tight">
+        <span class="text-xs text-white/60">¿Necesitas ayuda?</span>
+        <span class="text-sm font-semibold text-white">Escríbenos</span>
+    </div>
+</a>
