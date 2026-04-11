@@ -41,18 +41,11 @@
             </a>
 
         </nav>
-
-        <!-- 🔷 BOTÓN LOGIN (LO QUE PEDISTE) -->
-        <button
-            class="hidden md:flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300"
+        <button routerLink="login"
+            class=" cursor-pointer hidden md:flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300"
             [ngClass]="{
-
-      
         'bg-white text-black hover:bg-gray-200': !scrolled,
-
-       
         'bg-blue-700 text-white hover:bg-blue-800 shadow-lg shadow-blue-900/30': scrolled
-
       }">
 
             <i class="fa-solid fa-right-to-bracket text-xs"></i>
