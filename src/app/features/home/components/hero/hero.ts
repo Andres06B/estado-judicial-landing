@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { NgForOf, NgClass } from '@angular/common';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [NgForOf, NgClass],
+  imports: [NgForOf, NgClass, RouterLink],
   templateUrl: './hero.html',
   styleUrl: './hero.css',
 })
