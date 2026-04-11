@@ -11,7 +11,7 @@ import { CommonModule, NgClass } from '@angular/common';
 export class Header {
   menuOpen: boolean = false;
   activeSection = 'Home';
-  scrolled = false; 
+  scrolled = false;
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
@@ -68,4 +68,6 @@ export class Header {
       }
     }
   }
+
+  
 }

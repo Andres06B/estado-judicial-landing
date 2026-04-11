@@ -1,44 +1,154 @@
-<section class="w-full bg-[#0B1C2C] py-32 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-8 text-center">
+<section id="contacto" class="py-20 bg-slate-50 relative overflow-hidden">
 
-        <!-- 🔹 TITULO -->
-        <p class="text-xs tracking-[0.3em] text-[#272eac] font-medium mb-4 uppercase">
-            Clientes
-        </p>
+    <!-- Background suave -->
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50 to-transparent opacity-40"></div>
 
-        <h2 class="text-4xl md:text-5xl font-semibold text-white mb-6 leading-tight">
-            Empresas que <span class="text-[#272eac]">confían</span> en nosotros
-        </h2>
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
 
-        <p class="text-gray-400 max-w-xl mx-auto mb-20 text-lg leading-relaxed">
-            Relaciones construidas con confianza, resultados y compromiso a largo plazo.
-        </p>
+        <!-- HEADER -->
+        <div class="text-center mb-16">
+            <span class="text-blue-600 text-xs font-semibold tracking-widest uppercase">
+                Contacto
+            </span>
 
-        <!-- 🔥 CARRUSEL -->
-        <div class="relative overflow-hidden">
+            <h2 class="text-4xl font-bold text-slate-900 mt-3">
+                ¿Listo para
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700">
+                    empezar
+                </span>?
+            </h2>
 
-            <div class="clients-track">
+            <p class="mt-4 text-slate-600 max-w-xl mx-auto">
+                Contáctanos y optimiza tu gestión jurídica con soluciones confiables.
+            </p>
+        </div>
 
-                <div class="client-card group" *ngFor="let c of clientes">
-                    <img [src]="c.logo" />
+        <!-- GRID -->
+        <div class="grid lg:grid-cols-5 gap-10">
 
-                    <!-- 🔥 NOMBRE -->
-                    <span class="client-name">
-                        {{ c.nombre }}
-                    </span>
+            <!-- INFO -->
+            <div class="lg:col-span-2 space-y-5">
+
+                <!-- ITEM -->
+                <div
+                    class="flex gap-4 p-5 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center text-white">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-slate-900">Teléfono</p>
+                        <p class="text-sm text-slate-500">+57 300 123 4567</p>
+                    </div>
                 </div>
 
-                <!-- duplicado -->
-                <div class="client-card group" *ngFor="let c of clientes">
-                    <img [src]="c.logo" />
-                    <span class="client-name">
-                        {{ c.nombre }}
-                    </span>
+                <!-- ITEM -->
+                <div
+                    class="flex gap-4 p-5 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center text-white">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-slate-900">Email</p>
+                        <p class="text-sm text-slate-500">info@estadojuridico.com</p>
+                    </div>
                 </div>
+
+                <!-- ITEM -->
+                <div
+                    class="flex gap-4 p-5 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                    <div class="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center text-white">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-slate-900">Ubicación</p>
+                        <p class="text-sm text-slate-500">Bogotá, Colombia</p>
+                    </div>
+                </div>
+
+                <!-- HORARIO -->
+                <div class="p-5 bg-blue-600 rounded-xl text-white">
+                    <p class="font-semibold mb-2">Horario</p>
+                    <div class="text-sm space-y-1 opacity-90">
+                        <p>Lunes - Viernes: 8AM - 6PM</p>
+                        <p>Sábados: 9AM - 1PM</p>
+                        <p>Domingos: Cerrado</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FORM -->
+            <div class="lg:col-span-3 bg-white rounded-xl border border-slate-200 p-6 shadow-md">
+
+                <h3 class="text-xl font-semibold text-slate-900 mb-2">
+                    Envíanos un mensaje
+                </h3>
+
+                <p class="text-sm text-slate-500 mb-6">
+                    Te responderemos en el menor tiempo posible.
+                </p>
+
+                <form (ngSubmit)="sendEmail()" #form="ngForm" class="space-y-5">
+
+                    <!-- ROW 1 -->
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" name="name" [(ngModel)]="formData.name" placeholder="Nombre" required
+                            class="h-11 px-4 border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none w-full transition" />
+
+                        <input type="email" name="email" [(ngModel)]="formData.email" placeholder="Correo" required
+                            class="h-11 px-4 border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none w-full transition" />
+                    </div>
+
+                    <!-- ROW 2 -->
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input type="text" name="phone" [(ngModel)]="formData.phone" placeholder="Teléfono"
+                            class="h-11 px-4 border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none w-full transition" />
+
+                        <input type="text" name="company" [(ngModel)]="formData.company" placeholder="Empresa"
+                            class="h-11 px-4 border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none w-full transition" />
+                    </div>
+
+                    <!-- MESSAGE -->
+                    <textarea name="message" [(ngModel)]="formData.message" placeholder="Mensaje" required
+                        class="w-full h-28 p-4 border border-slate-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none resize-none transition"></textarea>
+
+                    <!-- BUTTON -->
+                    <button type="submit" [disabled]="isLoading"
+                        class="w-full h-11 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition flex items-center justify-center">
+                        <span *ngIf="!isLoading">Enviar mensaje</span>
+
+                        <span *ngIf="isLoading" class="flex items-center gap-2">
+                            <span
+                                class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+                            Enviando...
+                        </span>
+                    </button>
+
+                    <!-- SUCCESS -->
+                    <p *ngIf="successMessage" class="text-green-600 text-sm text-center">
+                        {{ successMessage }}
+                    </p>
+
+                    <!-- ERROR -->
+                    <p *ngIf="errorMessage" class="text-red-600 text-sm text-center">
+                        {{ errorMessage }}
+                    </p>
+
+                </form>
 
             </div>
 
         </div>
 
     </div>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/573001234567" target="_blank"
+        class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-xl transition">
+
+        <i class="fab fa-whatsapp text-white text-xl"></i>
+
+        <span class="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-20"></span>
+    </a>
+
 </section>

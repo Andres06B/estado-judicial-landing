@@ -26,6 +26,7 @@
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@tailwindcss/postcss": "^4.2.2",
+    "emailjs-com": "^3.2.0",
     "express": "^5.1.0",
     "lucide-angular": "^1.0.0",
     "postcss": "^8.5.9",

@@ -1,1 +1,129 @@
-<p>footer works!</p>
+<footer class="bg-blue-950 text-white relative overflow-hidden">
+
+    <!-- Decoración -->
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent">
+    </div>
+    <div class="absolute top-1/2 right-0 w-96 h-96 bg-blue-900/40 rounded-full blur-3xl -translate-y-1/2"></div>
+
+    <!-- Newsletter -->
+    <div class="relative z-10 border-b border-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+
+                <div>
+                    <h3 class="text-2xl font-bold mb-2">Manténgase Informado</h3>
+                    <p class="text-blue-200/70">Reciba las últimas novedades jurídicas en su correo</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Main Footer -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <!-- Brand -->
+            <div>
+                <a href="#" class="flex items-center gap-3 mb-6">
+
+                    <!-- 🔥 TU LOGO (IMAGEN) -->
+                    <div
+                        class="w-12 h-12 rounded-xl bg-white flex items-center justify-center overflow-hidden shadow-md">
+                        <img src="logo.png" alt="Estado Jurídico" class="w-full h-full object-contain p-1">
+                    </div>
+
+                    <span class="text-xl font-bold">Estado Jurídico</span>
+                </a>
+
+                <p class="text-blue-200/70 leading-relaxed mb-6">
+                    Apoyo jurídico informativo para los profesionales del derecho. Soluciones confiables, rápidas y
+                    eficaces en todo Colombia.
+                </p>
+
+                <div class="flex gap-3">
+                    <a *ngFor="let social of socialLinks" [href]="social.href" class="w-10 h-10 rounded-xl bg-blue-900 flex items-center justify-center 
+                   hover:bg-blue-600 transition transform hover:-translate-y-1">
+
+                        <i [class]="social.icon"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div>
+                <h3 class="text-sm font-bold uppercase tracking-wider mb-6 text-blue-400">Enlaces</h3>
+                <ul class="space-y-4">
+                    <li *ngFor="let link of quickLinks">
+                        <a [href]="link.href"
+                            class="text-blue-200/70 hover:text-white transition flex items-center gap-2 group">
+
+                            <i
+                                class="fas fa-arrow-right opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
+                            {{ link.label }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h3 class="text-sm font-bold uppercase tracking-wider mb-6 text-blue-400">Servicios</h3>
+                <ul class="space-y-4">
+                    <li *ngFor="let service of services">
+                        <a href="#servicios"
+                            class="text-blue-200/70 hover:text-white transition flex items-center gap-2 group">
+
+                            <i
+                                class="fas fa-arrow-right opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all"></i>
+                            {{ service }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h3 class="text-sm font-bold uppercase tracking-wider mb-6 text-blue-400">Contacto</h3>
+                <ul class="space-y-4 text-blue-200/70">
+
+                    <li class="flex items-start gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2"></span>
+                        <span>
+                            Calle 100 #19-61, Oficina 501 <br />
+                            Bogotá, Colombia
+                        </span>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2"></span>
+                        <span>+57 (1) 234-5678</span>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2"></span>
+                        <span>info@estadojuridico.com</span>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Footer bottom -->
+        <div class="py-8 border-t border-blue-900 flex flex-col sm:flex-row items-center justify-between gap-4">
+
+            <p class="text-blue-300/60 text-sm">
+                © {{ currentYear }} Estado Jurídico. Todos los derechos reservados.
+            </p>
+
+            <div class="flex gap-6 text-sm text-blue-300/60">
+                <a href="#" class="hover:text-white transition">Términos y Condiciones</a>
+                <a href="#" class="hover:text-white transition">Política de Privacidad</a>
+            </div>
+
+        </div>
+
+    </div>
+</footer>

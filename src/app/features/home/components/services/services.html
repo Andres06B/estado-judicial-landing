@@ -1,144 +1,138 @@
-<section id="Servicios" class="py-28 bg-white">
+<section id="Servicios" class="relative py-24 lg:py-32 overflow-hidden">
 
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+    <!-- 🖼️ Imagen de fondo clara -->
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-cover bg-center opacity-10"
+            style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1920&auto=format&fit=crop');">
+        </div>
+
+        <!-- Overlay blanco -->
+        <div class="absolute inset-0 bg-gradient-to-b from-white via-blue-50/80 to-white"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
         <!-- 🔷 TEXTO -->
         <div>
 
-            <span class="text-xs tracking-[0.2em] uppercase text-indigo-500 font-medium">
+            <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">
                 Servicios
             </span>
 
-            <h2 class="mt-4 text-4xl font-semibold text-gray-900 leading-tight">
+            <h2 class="mt-4 text-4xl sm:text-5xl font-bold text-gray-900 leading-tight">
                 ¿Por qué elegirnos?
             </h2>
 
             <!-- descripción -->
-            <div class="mt-8 space-y-4 text-gray-600 text-[15px] leading-relaxed">
+            <div class="mt-8 space-y-4 text-gray-600 text-base leading-relaxed">
 
                 <p>- Se reduce el tiempo en respuesta para cuando una notificación se dé en nombre de su empresa o
-                    negocio el cual está manejando.</p>
+                    negocio.</p>
 
-                <p>- A través de la plataforma se podrá dar respuesta en tiempo real a la misma en caso esté contando
-                    con el servicio o por requerimiento solicitado.</p>
+                <p>- A través de la plataforma se podrá dar respuesta en tiempo real según el servicio contratado.</p>
 
-                <p>- Manejamos comodidad en los precios para que puedan acceder de manera fácil, ágil y segura a la
-                    información, lo cual nos diferencia de otras empresas.</p>
+                <p>- Manejamos precios accesibles para facilitar el acceso a la información.</p>
 
-                <p class="text-gray-500">- Esta se le facturará al final del mes.</p>
+                <p class="text-gray-500">- Facturación mensual al final del periodo.</p>
 
             </div>
 
             <!-- línea -->
-            <div class="mt-10 h-[1px] w-16 bg-gradient-to-r from-indigo-500 to-cyan-500"></div>
+            <div class="mt-10 h-[2px] w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"></div>
 
-            <!-- servicios -->
-            <div class="mt-10 space-y-6 text-sm">
+            <!-- 🔷 SERVICIOS -->
+            <div class="mt-10 space-y-5">
 
                 <!-- ITEM -->
-                <div class="group flex gap-4 items-start">
+                <div
+                    class="group flex gap-4 p-4 rounded-xl bg-white border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all">
 
-                    <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-indigo-50 text-indigo-600">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700">
                         <i class="fa-solid fa-globe text-sm"></i>
                     </div>
 
                     <div>
-                        <h4 class="font-medium text-gray-900 cursor-pointer relative inline-block">
+                        <h4 class="font-semibold text-gray-900">
                             Boletín virtual
-                            <span
-                                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
                         </h4>
-
-                        <p class="text-gray-600 mt-1">
-                            - Acceso a juzgados virtualmente, visualizando estado, edictos, fijación, traslado,
-                            emplazatorios y otros documentos.
+                        <p class="text-gray-600 text-sm mt-1">
+                            Acceso a juzgados virtualmente, visualizando estados, edictos y documentos.
                         </p>
                     </div>
 
                 </div>
 
                 <!-- ITEM -->
-                <div class="group flex gap-4 items-start">
+                <div
+                    class="group flex gap-4 p-4 rounded-xl bg-white border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all">
 
-                    <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-cyan-50 text-cyan-600">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700">
                         <i class="fa-solid fa-eye text-sm"></i>
                     </div>
 
                     <div>
-                        <h4 class="font-medium text-gray-900 cursor-pointer relative inline-block">
+                        <h4 class="font-semibold text-gray-900">
                             Vigilancia de proceso
-                            <span
-                                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
                         </h4>
-
-                        <p class="text-gray-600 mt-1">
-                            - Se reportan procesos con providencias el mismo día o al siguiente, incluyendo términos y
-                            fechas de audiencia.
+                        <p class="text-gray-600 text-sm mt-1">
+                            Reporte diario de procesos, términos y fechas importantes.
                         </p>
                     </div>
 
                 </div>
 
                 <!-- ITEM -->
-                <div class="group flex gap-4 items-start">
+                <div
+                    class="group flex gap-4 p-4 rounded-xl bg-white border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all">
 
-                    <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-indigo-50 text-indigo-600">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700">
                         <i class="fa-solid fa-file-lines text-sm"></i>
                     </div>
 
                     <div>
-                        <h4 class="font-medium text-gray-900 cursor-pointer relative inline-block">
+                        <h4 class="font-semibold text-gray-900">
                             Boletín transcrito
-                            <span
-                                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
                         </h4>
-
-                        <p class="text-gray-600 mt-1">
-                            - Información actualizada del proceso disponible diariamente desde su lugar de trabajo.
+                        <p class="text-gray-600 text-sm mt-1">
+                            Información actualizada del proceso disponible diariamente.
                         </p>
                     </div>
 
                 </div>
 
                 <!-- ITEM -->
-                <div class="group flex gap-4 items-start">
+                <div
+                    class="group flex gap-4 p-4 rounded-xl bg-white border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all">
 
-                    <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-cyan-50 text-cyan-600">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700">
                         <i class="fa-solid fa-scale-balanced text-sm"></i>
                     </div>
 
                     <div>
-                        <h4 class="font-medium text-gray-900 cursor-pointer relative inline-block">
+                        <h4 class="font-semibold text-gray-900">
                             Mensajería Judicial
-                            <span
-                                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
                         </h4>
-
-                        <p class="text-gray-600 mt-1">
-                            - Radicación de demandas, memoriales y gestión de documentos dentro y fuera de despachos
-                            judiciales.
+                        <p class="text-gray-600 text-sm mt-1">
+                            Radicación de documentos y gestión dentro de despachos judiciales.
                         </p>
                     </div>
 
                 </div>
 
                 <!-- ITEM -->
-                <div class="group flex gap-4 items-start">
+                <div
+                    class="group flex gap-4 p-4 rounded-xl bg-white border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all">
 
-                    <div class="w-9 h-9 flex items-center justify-center rounded-lg bg-indigo-50 text-indigo-600">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-100 text-blue-700">
                         <i class="fa-solid fa-gears text-sm"></i>
                     </div>
 
                     <div>
-                        <h4 class="font-medium text-gray-900 cursor-pointer relative inline-block">
+                        <h4 class="font-semibold text-gray-900">
                             Proyecto a sus necesidades
-                            <span
-                                class="absolute left-0 -bottom-1 w-0 h-[2px] bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
                         </h4>
-
-                        <p class="text-gray-600 mt-1">
-                            - Servicio adaptado a los requerimientos específicos del cliente para optimizar su labor
-                            judicial.
+                        <p class="text-gray-600 text-sm mt-1">
+                            Servicio adaptado a requerimientos específicos del cliente.
                         </p>
                     </div>
 
@@ -148,12 +142,12 @@
 
         </div>
 
+        <!-- 🔷 PANEL DERECHO -->
         <div class="relative">
 
-            <!-- contenedor principal -->
-            <div class="relative bg-white border border-gray-200 rounded-3xl p-8 shadow-sm">
+            <div class="relative bg-white border border-blue-100 rounded-3xl p-8 shadow-lg">
 
-                <!-- encabezado tipo sistema -->
+                <!-- header -->
                 <div class="flex items-center justify-between mb-6">
                     <span class="text-xs text-gray-500">Estado Jurídico</span>
                     <span class="text-xs text-green-500 flex items-center gap-1">
@@ -162,55 +156,50 @@
                     </span>
                 </div>
 
-                <!-- lista tipo dashboard -->
+                <!-- lista -->
                 <div class="space-y-4">
 
-                    <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                    <div class="flex items-center justify-between p-3 rounded-lg bg-blue-50">
                         <span class="text-sm text-gray-700">Notificación recibida</span>
-                        <span class="text-xs text-indigo-600 font-medium">Nuevo</span>
+                        <span class="text-xs text-blue-600 font-medium">Nuevo</span>
                     </div>
 
-                    <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                    <div class="flex items-center justify-between p-3 rounded-lg bg-blue-50">
                         <span class="text-sm text-gray-700">Proceso actualizado</span>
-                        <span class="text-xs text-cyan-600 font-medium">Hoy</span>
+                        <span class="text-xs text-blue-600 font-medium">Hoy</span>
                     </div>
 
-                    <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                    <div class="flex items-center justify-between p-3 rounded-lg bg-blue-50">
                         <span class="text-sm text-gray-700">Documento radicado</span>
                         <span class="text-xs text-gray-500">Completado</span>
                     </div>
 
-                    <div class="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                    <div class="flex items-center justify-between p-3 rounded-lg bg-blue-50">
                         <span class="text-sm text-gray-700">Seguimiento activo</span>
                         <span class="text-xs text-green-600 font-medium">En curso</span>
                     </div>
 
                 </div>
 
-                <!-- mini gráfica fake -->
+                <!-- gráfica -->
                 <div class="mt-8">
-
                     <div class="flex items-end gap-2 h-16">
-
-                        <div class="w-2 bg-indigo-500/60 rounded" style="height: 40%"></div>
-                        <div class="w-2 bg-indigo-500/60 rounded" style="height: 70%"></div>
-                        <div class="w-2 bg-indigo-500/60 rounded" style="height: 50%"></div>
-                        <div class="w-2 bg-indigo-500/60 rounded" style="height: 90%"></div>
-                        <div class="w-2 bg-indigo-500/60 rounded" style="height: 60%"></div>
-
+                        <div class="w-2 bg-blue-500/60 rounded" style="height: 40%"></div>
+                        <div class="w-2 bg-blue-500/60 rounded" style="height: 70%"></div>
+                        <div class="w-2 bg-blue-500/60 rounded" style="height: 50%"></div>
+                        <div class="w-2 bg-blue-500/60 rounded" style="height: 90%"></div>
+                        <div class="w-2 bg-blue-500/60 rounded" style="height: 60%"></div>
                     </div>
 
                     <p class="text-xs text-gray-400 mt-2">
                         Actividad reciente del sistema
                     </p>
-
                 </div>
 
             </div>
 
-            <!-- glow sutil -->
-            <div
-                class="absolute -z-10 inset-0 bg-gradient-to-tr from-indigo-500/10 to-cyan-500/10 blur-2xl rounded-3xl">
+            <!-- glow -->
+            <div class="absolute -z-10 inset-0 bg-gradient-to-tr from-blue-500/10 to-blue-300/10 blur-2xl rounded-3xl">
             </div>
 
         </div>
@@ -219,3 +208,150 @@
 
 </section>
 
+<section class="relative py-28 overflow-hidden text-white">
+
+    <!-- 🔷 Fondo -->
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-cover bg-center opacity-20"
+            style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1920&auto=format&fit=crop');">
+        </div>
+
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/95 via-blue-800/90 to-blue-700/90"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6">
+
+        <!-- HEADER -->
+        <div class="max-w-2xl mb-16">
+
+            <span class="text-blue-200 font-semibold text-sm uppercase tracking-wider">
+                Tipos de Solicitud
+            </span>
+
+            <h2 class="mt-4 text-4xl font-bold leading-tight">
+                Servicios
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white">
+                    especializados
+                </span>
+            </h2>
+
+            <p class="mt-6 text-blue-100/80">
+                Gestión jurídica eficiente, rápida y confiable para cada necesidad.
+            </p>
+
+        </div>
+
+        <!-- GRID -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- 1 -->
+            <div class="group bg-white/10 border border-white/10 backdrop-blur-xl rounded-2xl p-6
+                  transition-all duration-500 ease-out hover:bg-white/15 hover:-translate-y-2 hover:shadow-2xl
+                  opacity-0 translate-y-10 animate-fadeUp">
+
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-14 h-14 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Instrumentos Públicos</h3>
+                </div>
+
+                <ul class="space-y-2 text-sm text-blue-100/80">
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Trámites legales
+                    </li>
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Embargos</li>
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Escrituras</li>
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Derecho de
+                        petición</li>
+                </ul>
+            </div>
+
+            <!-- 2 -->
+            <div class="group bg-white/10 border border-white/10 backdrop-blur-xl rounded-2xl p-6
+                  transition-all duration-500 ease-out hover:bg-white/15 hover:-translate-y-2 hover:shadow-2xl
+                  opacity-0 translate-y-10 animate-fadeUp delay-100">
+
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-14 h-14 rounded-xl bg-blue-500 flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-car"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Tránsito</h3>
+                </div>
+
+                <ul class="space-y-2 text-sm text-blue-100/80">
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Traspasos</li>
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Impuestos</li>
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Radicación de
+                        embargo</li>
+                </ul>
+            </div>
+
+            <!-- 3 -->
+            <div class="group bg-white/10 border border-white/10 backdrop-blur-xl rounded-2xl p-6
+                  transition-all duration-500 ease-out hover:bg-white/15 hover:-translate-y-2 hover:shadow-2xl
+                  opacity-0 translate-y-10 animate-fadeUp delay-200">
+
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-14 h-14 rounded-xl bg-blue-700 flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Trámites Especiales</h3>
+                </div>
+
+                <ul class="space-y-2 text-sm text-blue-100/80">
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Impulso procesal
+                    </li>
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Visitas a juzgados
+                    </li>
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Verificación de
+                        oficios</li>
+                </ul>
+            </div>
+
+            <!-- 4 -->
+            <div class="group bg-white/10 border border-white/10 backdrop-blur-xl rounded-2xl p-6
+                  transition-all duration-500 ease-out hover:bg-white/15 hover:-translate-y-2 hover:shadow-2xl
+                  opacity-0 translate-y-10 animate-fadeUp delay-300">
+
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-14 h-14 rounded-xl bg-blue-500 flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Visitas</h3>
+                </div>
+
+                <ul class="space-y-2 text-sm text-blue-100/80">
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Visita a predios
+                    </li>
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Entrega de
+                        documentos</li>
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Mensajería</li>
+                </ul>
+            </div>
+
+            <!-- 5 -->
+            <div class="group bg-white/10 border border-white/10 backdrop-blur-xl rounded-2xl p-6
+                  transition-all duration-500 ease-out hover:bg-white/15 hover:-translate-y-2 hover:shadow-2xl
+                  opacity-0 translate-y-10 animate-fadeUp delay-500">
+
+                <div class="flex items-center gap-4 mb-5">
+                    <div class="w-14 h-14 rounded-xl bg-blue-600 flex items-center justify-center shadow-lg">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Notarías</h3>
+                </div>
+
+                <ul class="space-y-2 text-sm text-blue-100/80">
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Registro de
+                        escrituras</li>
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Registro civil
+                    </li>
+                    <li class="flex gap-2"><span class="w-2 h-2 bg-blue-400 rounded-full mt-2"></span>Notas de vigencia
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>

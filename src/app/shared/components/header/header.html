@@ -1,10 +1,11 @@
 <header class="fixed top-0 w-full z-50 transition-all duration-500" [ngClass]="{
     'bg-transparent': !scrolled,
-    'bg-white/90 backdrop-blur-xl shadow-lg border-b border-gray-200/40': scrolled
+    'bg-white/80 backdrop-blur-xl shadow-lg border-b border-white/20': scrolled
   }">
+
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-8 py-4">
 
-        <!-- 🔷 Logo -->
+        <!-- 🔷 LOGO -->
         <div class="flex items-center gap-3 cursor-pointer">
             <img src="logo.png" class="h-10" />
             <div class="flex flex-col leading-tight">
@@ -13,70 +14,86 @@
                     Estado Jurídico
                 </span>
                 <span class="text-[11px] tracking-wider transition"
-                    [ngClass]="scrolled ? 'text-gray-500' : 'text-gray-400'">
+                    [ngClass]="scrolled ? 'text-gray-500' : 'text-blue-200/80'">
                     APOYO LEGAL PROFESIONAL
                 </span>
             </div>
         </div>
 
         <!-- 🔷 NAV DESKTOP -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <nav class="hidden md:flex items-center gap-3 text-sm font-medium">
 
             <a *ngFor="let item of ['Home','Servicios','Nosotros','Cobertura','Clientes','Contacto']"
-                (click)="smoothScroll(item)" class="group cursor-pointer relative px-2 py-1 transition-all duration-300"
+                (click)="smoothScroll(item)" class="cursor-pointer px-4 py-2 rounded-lg transition-all duration-300"
                 [ngClass]="{
-          'text-white': activeSection === item && !scrolled,
-          'text-gray-900': activeSection === item && scrolled,
-          'text-gray-300 hover:text-white': !scrolled && activeSection !== item,
-          'text-gray-600 hover:text-gray-900': scrolled && activeSection !== item
+          
+
+          'bg-white/15 text-white backdrop-blur-sm': activeSection === item && !scrolled,
+          'bg-gray-200 text-gray-900': activeSection === item && scrolled,
+
+       
+          'text-blue-100 hover:bg-white/10 hover:text-white': !scrolled && activeSection !== item,
+          'text-gray-600 hover:bg-gray-100 hover:text-gray-900': scrolled && activeSection !== item
         }">
 
                 {{ item }}
 
-                <!-- underline activo -->
-                <span class="absolute left-0 -bottom-1 h-[2px] transition-all duration-300" [ngClass]="{
-            'w-full bg-indigo-500': activeSection === item,
-            'w-0 group-hover:w-full bg-gradient-to-r from-indigo-500 to-indigo-400': activeSection !== item
-          }"></span>
-
             </a>
+
         </nav>
 
-        <!-- 🔷 BOTÓN -->
+        <!-- 🔷 BOTÓN LOGIN (LO QUE PEDISTE) -->
         <button
-            class=" cursor-pointer hidden md:flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300"
+            class="hidden md:flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-all duration-300"
             [ngClass]="{
-        'text-white border border-white/20 hover:bg-white hover:text-[#0f172a]': !scrolled,
-        'text-gray-800 border border-gray-300 hover:bg-gray-900 hover:text-white': scrolled
+
+      
+        'bg-white text-black hover:bg-gray-200': !scrolled,
+
+       
+        'bg-blue-700 text-white hover:bg-blue-800 shadow-lg shadow-blue-900/30': scrolled
+
       }">
+
             <i class="fa-solid fa-right-to-bracket text-xs"></i>
             Iniciar sesión
         </button>
 
-        <!-- 🔷 BOTÓN MOBILE -->
-        <button (click)="toggleMenu()" class="md:hidden text-2xl" [ngClass]="scrolled ? 'text-gray-800' : 'text-white'">
+        <!-- 🔷 MOBILE BTN -->
+        <button (click)="toggleMenu()" class="md:hidden text-2xl transition"
+            [ngClass]="scrolled ? 'text-gray-800' : 'text-white'">
             ☰
         </button>
 
     </div>
 
-    <!-- 🔻 MENÚ MOBILE -->
-    <div *ngIf="menuOpen" class="md:hidden px-6 pb-6 space-y-4 transition-all duration-300"
-        [ngClass]="scrolled ? 'bg-white' : 'bg-slate-900/95 backdrop-blur-xl'">
+    <!-- 🔻 MOBILE MENU -->
+    <div *ngIf="menuOpen" class="md:hidden absolute top-full left-0 w-full px-6 pb-6 pt-4 space-y-3 backdrop-blur-xl"
+        [ngClass]="scrolled 
+      ? 'bg-white/95 border-t border-gray-200' 
+      : 'bg-blue-900/95 border-t border-white/10'">
+
         <a *ngFor="let item of ['Home','Servicios','Nosotros','Cobertura','Clientes','Contacto']"
-            (click)="smoothScroll(item)" class="block text-base font-medium transition" [ngClass]="{
-        'text-indigo-500': activeSection === item,
-        'text-gray-300': !scrolled && activeSection !== item,
+            (click)="smoothScroll(item); toggleMenu()"
+            class="block px-4 py-2 rounded-lg text-base font-medium transition" [ngClass]="{
+
+        'bg-blue-500/20 text-blue-300': activeSection === item && !scrolled,
+        'bg-gray-200 text-gray-900': activeSection === item && scrolled,
+
+        'text-blue-100': !scrolled && activeSection !== item,
         'text-gray-700': scrolled && activeSection !== item
       }">
+
             {{ item }}
         </a>
 
-        <button class=" w-full mt-3 px-5 py-2 rounded-full text-sm font-medium transition" [ngClass]="{
+        <button class="w-full mt-4 px-5 py-2 rounded-full text-sm font-medium transition" [ngClass]="{
         'bg-white text-black': !scrolled,
-        'bg-gray-900 text-white': scrolled
+        'bg-blue-700 text-white': scrolled
       }">
             Iniciar sesión
         </button>
+
     </div>
+
 </header>
