@@ -1,20 +1,23 @@
-<a [href]="whatsappLink" target="_blank" rel="noopener noreferrer"
-    class="group fixed bottom-8 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-full backdrop-blur-xl border border-white/10 shadow-2xl transition-all duration-300 hover:scale-105 animate-soft-pulse"
-    style="
-    background: linear-gradient(135deg, rgba(37,211,102,0.15), rgba(18,140,126,0.25));
-  ">
-    <!-- Glow dinámico -->
+<a [href]="whatsappLink" target="_blank" rel="noopener noreferrer" class="group fixed bottom-6 right-6 z-50 flex items-center gap-3 
+   px-4 py-3 rounded-full 
+   bg-[#25D366] text-white
+   shadow-lg shadow-green-500/30
+   transition-all duration-300 
+   hover:scale-105 hover:shadow-xl hover:shadow-green-500/50
+   active:scale-95 cursor-pointer">
+
+    <!-- Glow suave -->
     <span class="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition duration-300"
-        style="box-shadow: 0 0 30px rgba(37, 211, 102, 0.45);">
+        style="box-shadow: 0 0 25px rgba(37, 211, 102, 0.4);">
     </span>
 
-    <!-- Badge notificación -->
-    <span class="absolute -top-1 -right-1 flex h-4 w-4">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500"></span>
+    <!-- Badge limpio -->
+    <span class="absolute -top-1 -right-1 flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-70"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
     </span>
 
-    <!-- Icono WhatsApp REAL -->
+    <!-- ICONO ORIGINAL (NO TOCADO) -->
     <div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#25D366] shadow-inner">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" viewBox="0 0 32 32" fill="currentColor">
             <path
@@ -23,8 +26,9 @@
     </div>
 
     <!-- Texto -->
-    <div class="hidden md:flex flex-col leading-tight">
-        <span class="text-xs text-white/60">¿Necesitas ayuda?</span>
-        <span class="text-sm font-semibold text-white">Escríbenos</span>
+    <div class="hidden sm:flex flex-col leading-tight">
+        <span class="text-[11px] text-white/80">¿Necesitas ayuda?</span>
+        <span class="text-sm font-semibold">Escríbenos</span>
     </div>
+
 </a>
